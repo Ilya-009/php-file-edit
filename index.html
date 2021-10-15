@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовое задание</title>
+</head>
+<body>
+
+<h1>Обработка файлов на сервере</h1>
+
+<table class="files">
+    <tr>
+        <td></td>
+        <td>Название файла</td>
+        <td>Preview</td>
+        <td>Разрешение</td>
+        <td>Расширение файла</td>
+        <td>Размер</td>
+    </tr>
+</table>
+
+<div class="file-commands">
+    <h2>Выбор шагов для редактирования документов</h2>
+    <div>
+        <div class="document-tasks">
+            <div class="file-command">
+                <div class="file-command__checkbox">
+                    <input type="checkbox" class="task-check" data="0">
+                </div>
+                <div class="file-command__name">Удалить символ <input type="text" id="removed-symbol"> из содержания файла</div>
+            </div>
+
+            <div class="file-command">
+                <div class="file-command__checkbox">
+                    <input type="checkbox" class="task-check" data="1">
+                </div>
+                <div class="file-command__name">Вставить текст <input type="text" id="inserted-text"> в файл</div>
+            </div>
+
+            <div class="file-command">
+                <div class="file-command__checkbox">
+                    <input type="checkbox" class="task-check" data="2">
+                </div>
+                <div class="file-command__name">Очистить файл</div>
+            </div>
+        </div>
+
+        <h2>Выбор шагов для редактирования картинок</h2>
+
+        <div class="image-tasks">
+            <div class="file-command">
+                <div class="file-command__checkbox">
+                    <input type="checkbox" class="task-check" data="3">
+                </div>
+                <div class="file-command__name">Изменить ширину a и высоту b на <input type="text" placeholder="a,b"> px</div>
+            </div>
+
+            <div class="file-command">
+                <div class="file-command__checkbox">
+                    <input type="checkbox" class="task-check" data="4">
+                </div>
+                <div class="file-command__name">Обрезать изображение шириной a, высотой b <input type="text" placeholder="a,b"></div>
+            </div>
+            <div class="file-command">
+                <div class="file-command__checkbox">
+                    <input type="checkbox" class="task-check" data="5">
+                </div>
+                <div class="file-command__name">Преобразовать в png</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="control-btns">
+    <div class="start-btn custom-btn" id="start-btn" style="background-color: green">Start</div>
+    <div class="stop-btn custom-btn" style="background-color: red; margin-left: 25px;">Stop</div>
+</div>
+
+<div class="notification-popup hide">
+    <div class="notification-popup__message"></div>
+</div>
+
+<style>
+    .files{
+        border-collapse: collapse;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .files td{
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+    }
+
+    .files td img{
+        max-height: 150px;
+    }
+
+    .control-btns{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .custom-btn{
+        background-color: #00b090;
+        padding: 8px 32px;
+        font-weight: bold;
+        color: #fff;
+        outline: none;
+        border: none;
+        transition: .4s;
+        width: max-content;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .custom-btn:hover{
+        background-color: #008a71;
+    }
+
+    .file-command{
+        display: flex;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .notification-popup{
+        background-color: #ff8383;
+        color: #ffffff;
+        border-radius: 5px;
+        height: max-content;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 250px;
+        font-size: 18px;
+        padding: 8px;
+    }
+</style>
+
+<script src="js/main.js"></script>
+</body>
+</html>
